@@ -19,7 +19,7 @@ Asynchronous JavaScript programming to ensure non-blocking execution and efficie
 -Optimizing performance by implementing caching mechanisms for API responses to reduce unnecessary requests and improve load times.
 -Implementing user authentication and authorization to enable personalized experiences and access control within the application.
 
-Overall Learning Experience:
+# Overall Learning Experience:
 
 The project provided valuable hands-on experience in integrating JavaScript APIs, asynchronous programming, and client-side routing.
 Overcoming challenges encountered during development enhanced problem-solving skills and deepened understanding of JavaScript concepts.
