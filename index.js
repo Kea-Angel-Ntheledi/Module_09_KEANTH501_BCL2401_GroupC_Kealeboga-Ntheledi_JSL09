@@ -1,43 +1,47 @@
 try {
-    const res = await fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
-    const data = await res.json()
-    document.body.style.backgroundImage = `url(${data.urls.regular})`
-    document.getElementById("author").textContent = `By: ${data.user.name}`
+  const res = await fetch(
+    "https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature"
+  );
+  const data = await res.json();
+  document.body.style.backgroundImage = `url(${data.urls.regular})`;
+  document.getElementById("author").textContent = `By: ${data.user.name}`;
 } catch (err) {
-    document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1560008511-11c63416e52d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMTEwMjl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjI4NDIxMTc&ixlib=rb-1.2.1&q=80&w=1080
-)`
-    document.getElementById("author").textContent = `By: Dodi Achmad`
+  document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1560008511-11c63416e52d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMTEwMjl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjI4NDIxMTc&ixlib=rb-1.2.1&q=80&w=1080
+)`;
+  document.getElementById("author").textContent = `By: Dodi Achmad`;
 }
 
-
 try {
-    const res = await fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
-    if (!res.ok) {
-        throw Error("Something went wrong")
-    }
-    const data = await res.json()
-    document.getElementById("crypto-top").innerHTML = `
+  const res = await fetch("https://api.coingecko.com/api/v3/coins/dogecoin");
+  if (!res.ok) {
+    throw Error("Something went wrong");
+  }
+  const data = await res.json();
+  document.getElementById("crypto-top").innerHTML = `
         <img src=${data.image.small} />
         <span>${data.name}</span>
-    `
-    document.getElementById("crypto").innerHTML += `
+    `;
+  document.getElementById("crypto").innerHTML += `
         <p>🎯: $${data.market_data.current_price.usd}</p>
         <p>👆: $${data.market_data.high_24h.usd}</p>
         <p>👇: $${data.market_data.low_24h.usd}</p>
-    `
+    `;
 } catch (err) {
-    console.error(err)
+  console.error(err);
 }
 
 function getCurrentTime() {
-    const date = new Date()
-    document.getElementById("time").textContent = date.toLocaleTimeString("en-us", { timeStyle: "short" })
+  const date = new Date();
+  document.getElementById("time").textContent = date.toLocaleTimeString(
+    "en-us",
+    { timeStyle: "short" }
+  );
 }
 
-setInterval(getCurrentTime, 1000)
+setInterval(getCurrentTime, 1000);
 
-const latitude = -25.6654;
-const longitude = 27.2423;
+const latitude = -25.6818;
+const longitude = 27.2559;
 
 try {
   const res = await fetch(
@@ -55,4 +59,3 @@ try {
 } catch (error) {
   console.error("Error fetching weather data:", error);
 }
-
