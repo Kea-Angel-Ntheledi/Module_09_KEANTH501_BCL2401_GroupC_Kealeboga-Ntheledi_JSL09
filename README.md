@@ -1,4 +1,4 @@
-## The_promise_rejection_dashboard_challenge_JSLO9
+### The_promise_rejection_dashboard_challenge_JSLO9
 # Project Overview:
 -I developed a single-page dashboard application that integrates multiple JavaScript APIs, including bored URLs for navigation and RESTful APIs for data retrieval.
 -In my dashboard web asynchronous JavaScript techniques such as promises and async/await for efficient handling of API calls and data processing.
