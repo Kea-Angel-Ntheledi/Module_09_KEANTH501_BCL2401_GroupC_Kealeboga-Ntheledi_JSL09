@@ -36,8 +36,8 @@ function getCurrentTime() {
 
 setInterval(getCurrentTime, 1000)
 
-const latitude = -25.6818;
-const longitude = 27.2559;
+const latitude = -25.6654;
+const longitude = 27.2423;
 
 try {
   const res = await fetch(
